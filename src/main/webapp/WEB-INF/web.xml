@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://JAVA.sun.com/xml/ns/javaee" version="2.5"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- DELOYING THE DEMO SERVLET -->
+	
+	<context-param>
+	
+	<param-name>school</param-name>
+	<param-value>Govt</param-value>
+	
+	</context-param>
+	
+	<servlet>
+		<servlet-name>first1</servlet-name>
+		<servlet-class>com.ty.servlets_student.controller.StudentLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>first1</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>first2</servlet-name>
+		<servlet-class>com.ty.servlets_student.controller.StudentController</servlet-class>
+		
+		<init-param>
+	<param-name>fees</param-name>
+	<param-value>30000</param-value>
+	
+	</init-param>
+	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>first2</servlet-name>
+		<url-pattern>/signup</url-pattern>
+		
+		
+	</servlet-mapping>
+	
+	
+</web-app>
+
